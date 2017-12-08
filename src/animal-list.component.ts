@@ -4,11 +4,12 @@ import {Animal} from './animal.model';
 @Component({
   selector: 'animal-list',
   template:`
+  <div class = "animal-list-container">
   <select (change)="onChange($event.target.value)">
   <option value="All Ages">All Ages</option>
-  <option value="young">young</option>
-  <option value="average">average</option>
-  <option value="old">old</option>
+  <option value="young">2 years old and younger</option>
+  <option value="average">over 2 and less than 9 years old</option>
+  <option value="old">over 9 years old</option>
   </select>
   <div *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
       <p>Species: {{currentAnimal.species}}</p>
@@ -23,17 +24,14 @@ import {Animal} from './animal.model';
       <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
       <button (click)="removeAnimalButtonHasBeenClicked(currentAnimal)">Remove</button>
     </div>
-
+  </div>
   `
 })
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
-  // @Input() childTaproomEmployee: boolean;
   @Output() editSender = new EventEmitter();
-  // @Output() userSender = new EventEmitter();
   @Output() removeSender = new EventEmitter();
-  // @Output() sellSender = new EventEmitter();
 
   filterByAge: string = "All Ages";
 
@@ -42,9 +40,6 @@ export class AnimalListComponent {
     this.filterByAge = optionFromMenu;
   }
 
-  // changeUserButtonHasBeenClicked(){
-  //   this.userSender.emit();
-  // }
   editButtonHasBeenClicked(animalToEdit: Animal){
     this.editSender.emit(animalToEdit);
   }

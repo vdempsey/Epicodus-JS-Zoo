@@ -4,19 +4,19 @@ import {Animal} from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-
+  <div class = "container">
   <animal-list [childAnimalList]="masterAnimalList" (editSender)="editAnimal($event)" (removeSender)="removeAnimal($event)"></animal-list>
   <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   <edit-animal [childSelectedAnimal]="selectedAnimal" (doneSender)="finishEdit()"></edit-animal>
-
+  </div>
   `
 })
 
 export class AppComponent {
-  testAnimal: Animal = new Animal("Arctic Fox", "Moon", 2, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
-  testAnimal1: Animal = new Animal("Arctic Bear", "Moon", 5, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
-  testAnimal2: Animal = new Animal("Arctic Sheep", "Moon", 10, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
-  masterAnimalList: Animal[] = [this.testAnimal, this.testAnimal1, this.testAnimal2];
+  initialAnimalOne: Animal = new Animal("Arctic Fox", "Moon", 2, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
+  initialAnimalTwo: Animal = new Animal("Arctic Bear", "Moon", 5, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
+  initialAnimalThree: Animal = new Animal("Arctic Sheep", "Moon", 10, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
+  masterAnimalList: Animal[] = [this.initialAnimalOne, this.initialAnimalTwo, this.initialAnimalThree];
   selectedAnimal = null;
 
 
