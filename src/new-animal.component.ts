@@ -1,14 +1,14 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
-import {Animal} from './animal.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'new-animal',
   template: `
-  <div class="new-form">
+
     <h3>Add Animal</h3>
     <label>Species</label>
     <input type="text" #animalSpecies>
-    <label>Name</label>
+    <br><label>Name</label>
     <input type="text" #animalName>
     <br><label>Age</label>
     <input type="text" #animalAge>
@@ -25,8 +25,8 @@ import {Animal} from './animal.model';
     <br><label>Dislikes</label>
     <input type="text" #animalDislikes>
     <br>
-    <button (click)="submitForm(animalSpecies.value, animalName.value, animalAge.value, animalDiet.value, animalLocation.value, animalCaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value); animalSpecies.value=''; animalName.value=''; animalAge.value=''; animalDiet.value=''; animalLocation.value=''; animalCaretakers.value=''; animalSex.value=''; animal.Likes.value=''; animalDislikes.value='';">Add</button>
-  </div>
+    <button (click)="submitForm(animalSpecies.value, animalName.value, animalAge.value, animalDiet.value, animalLocation.value, animalCaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value); animalSpecies.value=''; animalName.value=''; animalAge.value=''; animalDiet.value=''; animalLocation.value=''; animalCaretakers.value=''; animalSex.value=''; animalLikes.value=''; animalDislikes.value='';">Add</button>
+
   `
 })
 
