@@ -26,7 +26,6 @@ _This is an application which allows a zoo employee enter a new animal and view 
 
     2. In the command line run the following commands at the root level of your cloned repository folder:
         - $npm install
-        - $bower install
         - $gulp build
         - $gulp serve (to preview live server updates)
 
@@ -36,9 +35,9 @@ _This is an application which allows a zoo employee enter a new animal and view 
 ## Specifications
 
 
-| Description        | Input           | Output |
+| Description| Input           | Output |
 | ------------- |:-------------| :-----|
-| To add a new animal, the user will enter info in appropriate fiels in provided form | Species: "Monkey"<br>Name: "Zita"<br>Age: 5<br>Diet: "Vegetarian"<br>Location: "Tropics"<br>Caretakers: 2<br>Sex: "female"<br>Likes: "Bananas, Toys"<br>Dislikes: "Briefcases" | **Species:** Monkey<br>**Name:** Zita<br>**Age:** 5<br>Diet: Vegetarian<br>**Location:** Tropics<br>**Caretakers:** 2<br>Sex: female<br>**Likes:** Bananas, Toys<br>**Dislikes:** Briefcases |
+| To add a new animal, the user will enter info in appropriate fields in provided form | Species: "Monkey"<br>Name: "Zita"<br> Age: 5<br>Diet: "Vegetarian"<br>Location: "Tropics"<br>Caretakers: 2<br>Sex: "female"<br>Likes: "Bananas, Toys"<br>Dislikes: "Briefcases" | **Species:** Monkey<br>**Name:** Zita<br>**Age:** 5<br>Diet: Vegetarian<br>**Location:** Tropics<br>**Caretakers:** 2<br>Sex: female<br>**Likes:** Bananas, Toys<br>**Dislikes:** Briefcases |
 | Display animals by age group      |   2 years old and younger | **Species:** Arctic Fox<br>**Name:** Moon<br>**Age:** 2<br>Diet: Carnivore<br>**Location:** Northern Trail<br>**Caretakers:** 5<br>Sex: Female<br>**Likes:** Cool shade<br>**Dislikes:** Loud Noises
 | To edit an entry for existing animal, the user clicks "edit" button in the info block for selected animal  | edit "Name" field for "Arctic Fox"<br> Change from "Moon" to "Sun" |  updated entry will display<br><br> **Name:** Sun |
 
@@ -56,11 +55,10 @@ _Please feel free to reach out with any questions, etc. to valiadempsey@gmail.co
 
 ## Technologies/Resources Used
 
+* AngularJS
+* TypeScript
 * ES6 (JavaScript)
-* Node.js, including:
-  - Bower
-  - Gulp
-* jQuery
+* Node.js
 * HTML, CSS, Sass
 
 
