@@ -10,13 +10,13 @@ import { Animal } from './animal.model';
     <br>
     <input [(ngModel)]="childSelectedAnimal.name">
     <br>
-    <input [(ngModel)]="childSelectedKeg.age">
+    <input [(ngModel)]="childSelectedAnimal.age">
     <br>
-    <input [(ngModel)]="childSelectedKeg.diet">
+    <input [(ngModel)]="childSelectedAnimal.diet">
     <br>
-    <input [(ngModel)]="childSelectedKeg.location">
+    <input [(ngModel)]="childSelectedAnimal.location">
     <br>
-    <input [(ngModel)]="childSelectedKeg.caretakers">
+    <input [(ngModel)]="childSelectedAnimal.caretakers">
     <br>
     <input [(ngModel)]="childSelectedAnimal.sex">
     <br>

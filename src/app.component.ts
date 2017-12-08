@@ -14,7 +14,9 @@ import {Animal} from './animal.model';
 
 export class AppComponent {
   testAnimal: Animal = new Animal("Arctic Fox", "Moon", 2, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
-  masterAnimalList: Animal[] = [this.testAnimal];
+  testAnimal1: Animal = new Animal("Arctic Bear", "Moon", 5, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
+  testAnimal2: Animal = new Animal("Arctic Sheep", "Moon", 10, "Carnivore", "Northern Trail", 5, "Female", "Cool shade", "Loud noises");
+  masterAnimalList: Animal[] = [this.testAnimal, this.testAnimal1, this.testAnimal2];
   selectedAnimal = null;
 
 
