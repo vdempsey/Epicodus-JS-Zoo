@@ -5,9 +5,11 @@ import {Animal} from './animal.model';
   selector: 'app-root',
   template: `
   <div class = "container">
-  <animal-list [childAnimalList]="masterAnimalList" (editSender)="editAnimal($event)" (removeSender)="removeAnimal($event)"></animal-list>
-  <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
-  <edit-animal [childSelectedAnimal]="selectedAnimal" (doneSender)="finishEdit()"></edit-animal>
+    <animal-list [childAnimalList]="masterAnimalList" (editSender)="editAnimal($event)" (removeSender)="removeAnimal($event)"></animal-list>
+    <div class = "form-wrap">
+      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneSender)="finishEdit()"></edit-animal>
+    </div>
   </div>
   `
 })
