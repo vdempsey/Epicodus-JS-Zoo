@@ -26,7 +26,7 @@ import { Animal } from './animal.model';
     <input type="text" #animalDislikes>
     <br>
     <label for="file">Img Url</label>
-   <input type="text" #animalUrl>
+    <input type="text" #animalUrl>
     <button (click)="submitForm(animalSpecies.value, animalName.value, animalAge.value, animalDiet.value, animalLocation.value, animalCaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value, animalUrl.value); animalSpecies.value=''; animalName.value=''; animalAge.value=''; animalDiet.value=''; animalLocation.value=''; animalCaretakers.value=''; animalSex.value=''; animalLikes.value=''; animalDislikes.value=''; animalUrl.value=''">Add</button>
 
   `

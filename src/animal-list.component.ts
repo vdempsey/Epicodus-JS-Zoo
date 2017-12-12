@@ -12,19 +12,23 @@ import {Animal} from './animal.model';
       <option value="old">over 9 years old</option>
     </select>
     <ul>
-      <li *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
-        <p>Species: {{currentAnimal.species}}</p>
-        <p>Name: {{currentAnimal.name}}</p>
-        <p>Age: {{currentAnimal.age}}</p>
-        <p>Diet: {{currentAnimal.diet}}</p>
-        <p>Location: {{currentAnimal.location}}</p>
-        <p>Caretakers: {{currentAnimal.caretakers}}</p>
-        <p>Sex: {{currentAnimal.sex}}</p>
-        <p>Likes: {{currentAnimal.likes}}</p>
-        <p>Dislikes: {{currentAnimal.dislikes}}</p>
-        <div class="animalImg"><img src='{{currentAnimal.url}}'></div>
-        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
-        <button (click)="removeAnimalButtonHasBeenClicked(currentAnimal)">Remove</button>
+      <li class="animal" *ngFor="let currentAnimal of childAnimalList | age:filterByAge">
+        <div class="animalImg">
+        <img src='{{currentAnimal.url}}'>
+        </div>
+        <div class="animal-info">
+          <p>Species: {{currentAnimal.species}}</p>
+          <p>Name: {{currentAnimal.name}}</p>
+          <p>Age: {{currentAnimal.age}}</p>
+          <p>Diet: {{currentAnimal.diet}}</p>
+          <p>Location: {{currentAnimal.location}}</p>
+          <p>Caretakers: {{currentAnimal.caretakers}}</p>
+          <p>Sex: {{currentAnimal.sex}}</p>
+          <p>Likes: {{currentAnimal.likes}}</p>
+          <p>Dislikes: {{currentAnimal.dislikes}}</p>
+        </div>
+        <div class="animal-buttons"><button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button>
+        <button (click)="removeAnimalButtonHasBeenClicked(currentAnimal)">Remove</button></div>
       </li>
     </ul>
   </div>
