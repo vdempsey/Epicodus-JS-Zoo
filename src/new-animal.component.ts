@@ -25,7 +25,9 @@ import { Animal } from './animal.model';
     <br><label>Dislikes</label>
     <input type="text" #animalDislikes>
     <br>
-    <button (click)="submitForm(animalSpecies.value, animalName.value, animalAge.value, animalDiet.value, animalLocation.value, animalCaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value); animalSpecies.value=''; animalName.value=''; animalAge.value=''; animalDiet.value=''; animalLocation.value=''; animalCaretakers.value=''; animalSex.value=''; animalLikes.value=''; animalDislikes.value='';">Add</button>
+    <label for="file">Img Url</label>
+   <input type="text" #animalUrl>
+    <button (click)="submitForm(animalSpecies.value, animalName.value, animalAge.value, animalDiet.value, animalLocation.value, animalCaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value, animalUrl.value); animalSpecies.value=''; animalName.value=''; animalAge.value=''; animalDiet.value=''; animalLocation.value=''; animalCaretakers.value=''; animalSex.value=''; animalLikes.value=''; animalDislikes.value=''; animalUrl.value=''">Add</button>
 
   `
 })
@@ -33,8 +35,8 @@ import { Animal } from './animal.model';
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
 
-  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
-    let newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
+  submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string, url: string) {
+    let newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes, url);
     this.newAnimalSender.emit(newAnimalToAdd);
   }
 }

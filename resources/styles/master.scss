@@ -7,7 +7,7 @@ p, h1, h2, h3, h4, h5, label {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background-color: white;
   padding: 20px;
@@ -17,8 +17,29 @@ p, h1, h2, h3, h4, h5, label {
   flex-wrap: wrap;
 }
 
+.animal-list {
+
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
 .form-wrap {
-  width: 300px;
+  width: 20%;
   background-color: #f4e242;
   padding: 30px;
+}
+
+ul {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: raw;
+  flex-wrap: wrap;
+  height: 400px;
+  list-style: none;
+}
+
+li {
+  flex-basis: 30%;
+  padding: 10px;
 }
